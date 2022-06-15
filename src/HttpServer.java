@@ -70,7 +70,6 @@ public class HttpServer {
     crlf[1] = 0x0A;
     System.out.println("Serveur en attente de connexions");
     while (!arret) {
-      ss.setReuseAddress(true);
       if (args.length == 0) ss = new ServerSocket(port);
       else ss = new ServerSocket(Integer.parseInt(args[0]));
 
